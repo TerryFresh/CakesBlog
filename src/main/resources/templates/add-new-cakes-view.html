@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Блог сайта</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+<header th:insert="blocks/header :: header"></header>
+
+<div class="container mt-5 mb-5">
+    <h1>Добавление тортика</h1>
+    <form action="/myworks/add" enctype="multipart/form-data" method="post">
+        <input type="text" name="name" placeholder="Введите название торта" class="form-control">
+        <br>
+        <textarea name="description" placeholder="Введите описание торта" class="form-control"></textarea>
+<!--        <input type="text" name="description" placeholder="Введите описание торта" class="form-control">-->
+        <br>
+        <input type="text" name="amount" placeholder="Единица измерения ( 1 шт. / 1 кг. )" class="form-control">
+        <br>
+        <input type="number" name="price" placeholder="Введите цену торта" class="form-control">
+        <br>
+        <input type="file" name="file" placeholder="Вставьте фото" class="form-control">
+        <br>
+        <button type="submit" class="btn btn-success">Добавить торт</button>
+    </form>
+</div>
+
+<header th:insert="blocks/footer :: footer"></header>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
